@@ -42,19 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-
-task androidSourcesJar(type: Jar) {
-    if (project.hasProperty("kotlin")) {
-        from android.sourceSets.main.java.getSrcDirs()
-    } else if (project.hasProperty("android")) {
-        from android.sourceSets.main.java.sourceFiles
-    } else {
-        from sourceSets.main.allSource
-    }
-    classifier "sources"
-}
-
-
 afterEvaluate {
     publishing {
         publications {
@@ -63,7 +50,6 @@ afterEvaluate {
 
                 groupId = "com.github.zAmoChen"
                 artifactId = "TesstJitPack"
-                artifact androidSourcesJar
             }
 
             debug(MavenPublication) {
@@ -71,7 +57,6 @@ afterEvaluate {
 
                 groupId = "com.github.zAmoChen"
                 artifactId = "TesstJitPack"
-                artifact androidSourcesJar
             }
         }
     }
