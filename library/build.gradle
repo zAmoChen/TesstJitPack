@@ -61,8 +61,8 @@ afterEvaluate {
             releases(MavenPublication) {
                 from components.release
 
-                groupId = "com.test"
-                artifactId = "testlibrary"
+                groupId = "com.github.zAmoChen"
+                artifactId = "TesstJitPack"
                 version = VERSION_NAME
                 artifact androidSourcesJar
             }
@@ -70,8 +70,8 @@ afterEvaluate {
             debug(MavenPublication) {
                 from components.debug
 
-                groupId = "com.test"
-                artifactId = "testlibrary"
+                groupId = "com.github.zAmoChen"
+                artifactId = "TesstJitPack"
                 version = VERSION_NAME
                 artifact androidSourcesJar
             }
