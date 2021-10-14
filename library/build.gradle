@@ -63,7 +63,6 @@ afterEvaluate {
 
                 groupId = "com.github.zAmoChen"
                 artifactId = "TesstJitPack"
-                version = VERSION_NAME
                 artifact androidSourcesJar
             }
 
@@ -72,7 +71,6 @@ afterEvaluate {
 
                 groupId = "com.github.zAmoChen"
                 artifactId = "TesstJitPack"
-                version = VERSION_NAME
                 artifact androidSourcesJar
             }
         }
